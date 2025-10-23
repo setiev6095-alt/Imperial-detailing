@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imperial Detailing — Детейлинг-центр</title>
+    <meta name="description" content="Imperial Detailing: премиальный детейлинг — керамика, полировка, химчистка салона, защитные плёнки." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Раздел: Шапка (Header)
+    Роль: логотип, навигация, переключатель темы, выбор языка, бургер-меню
+    Стили: css/styles.css (.header, .nav, .burger, .theme-toggle, .lang-switch)
+    -->
+    <header class="header">
+      <div class="container header__row">
+        <a class="logo" href="index.html" aria-label="Imperial Detailing">
+          <svg class="logo__mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 8l4 3 5-6 5 6 4-3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8z"/>
+          </svg>
+          <span class="logo__name">Imperial Detailing</span>
+        </a>
+
+        <nav class="nav" id="mainNav" aria-label="Главное меню">
+          <ul>
+            <li><a class="nav__link nav__link--active" href="index.html" data-i18n="nav.home">Главная</a></li>
+            <li><a class="nav__link" href="services.html" data-i18n="nav.services">Услуги</a></li>
+            <li><a class="nav__link" href="#about" data-i18n="nav.about">Что такое детейлинг</a></li>
+            <li><a class="nav__link" href="#contacts" data-i18n="nav.contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Выбор языка">
+          <button class="lang-switch__btn" data-lang="ru">RU</button>
+          <button class="lang-switch__btn" data-lang="en">EN</button>
+          <button class="lang-switch__btn" data-lang="tr">TR</button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+          <span class="theme-toggle__icon" aria-hidden="true">🌗</span>
+        </button>
+
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-controls="mainNav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Раздел: Герой
+      Роль: главный заголовок и кнопка действия
+      Стили: css/styles.css (.hero, .btn)
+      -->
+      <section class="hero" id="hero">
+        <div class="container hero__content">
+          <h1 class="hero__title" data-i18n="hero.title">Imperial Detailing — детейлинг-центр</h1>
+          <p class="hero__subtitle" data-i18n="hero.subtitle">Премиальный уход за автомобилем: блеск, защита и новая жизнь вашему авто.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="services.html" data-i18n="hero.cta.services">Смотреть услуги</a>
+            <a class="btn" href="#contacts" data-i18n="hero.cta.book">Записаться</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Раздел: Что такое детейлинг -->
+      <section class="section" id="about">
+        <div class="container">
+          <h2 class="section__title" data-i18n="about.title">Что такое детейлинг</h2>
+          <div class="grid grid--2">
+            <p data-i18n="about.text">
+              Детейлинг — это комплекс процедур по тщательной очистке, восстановлению и защите автомобиля внутри и снаружи. Мы работаем бережно, строго по технологиям и используем профессиональную химию.
+            </p>
+            <ul class="list">
+              <li data-i18n="about.l1">Глубокая мойка и деконтаминация</li>
+              <li data-i18n="about.l2">Многоступенчатая полировка ЛКП</li>
+              <li data-i18n="about.l3">Защитные покрытия: керамика, воск, плёнки</li>
+              <li data-i18n="about.l4">Химчистка и кондиционирование салона</li>
+            </ul>
+          </div>
+          <p class="about__more" data-i18n="about.more">Регулярный детейлинг сохраняет покрытие, упрощает уход и повышает остаточную стоимость автомобиля. Базовый уход рекомендуем ежемесячно, защитные покрытия — раз в 6–24 месяца.</p>
+        </div>
+      </section>
+
+      <!-- Раздел: Превью услуг -->
+      <section class="section" id="services-preview">
+        <div class="container">
+          <h2 class="section__title" data-i18n="preview.title">Популярные услуги</h2>
+          <div class="cards">
+            <article class="card">
+              <h3 class="card__title" data-i18n="service.polish.title">Полировка кузова</h3>
+              <p class="card__desc" data-i18n="service.polish.desc">Удаление царапин и матовости, восстановление глянца.</p>
+              <p class="card__price" data-price="1500" data-price-key="polish">от 1500₺</p>
+              <a class="card__link" href="services.html#polish">Подробнее</a>
+            </article>
+            <article class="card">
+              <h3 class="card__title" data-i18n="service.ceramic.title">Керамическое покрытие</h3>
+              <p class="card__desc" data-i18n="service.ceramic.desc">Долговременная защита и глубокий блеск ЛКП.</p>
+              <p class="card__price" data-price="2500" data-price-key="ceramic">от 2500₺</p>
+              <a class="card__link" href="services.html#ceramic">Подробнее</a>
+            </article>
+            <article class="card">
+              <h3 class="card__title" data-i18n="service.interior.title">Химчистка салона</h3>
+              <p class="card__desc" data-i18n="service.interior.desc">Свежесть, чистота и забота о материалах салона.</p>
+              <p class="card__price" data-price="1200" data-price-key="interior">от 1200₺</p>
+              <a class="card__link" href="services.html#interior">Подробнее</a>
+            </article>
+            <article class="card">
+              <h3 class="card__title" data-i18n="service.ppf.title">Защитная плёнка (PPF)</h3>
+              <p class="card__desc" data-i18n="service.ppf.desc">Невидимая броня от сколов и пескоструя.</p>
+              <p class="card__price" data-price="3500" data-price-key="ppf">от 3500₺</p>
+              <a class="card__link" href="services.html#ppf">Подробнее</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Раздел: Контакты и форма -->
+      <section class="section section--contacts" id="contacts">
+        <div class="container">
+          <h2 class="section__title" data-i18n="contacts.title">Контакты</h2>
+          <p class="contacts__lead" data-i18n="contacts.lead">Свяжитесь с нами, чтобы записаться или задать вопрос — ответим в течение 10 минут.</p>
+          <div class="grid grid--2">
+            <div class="contacts">
+              <p><strong data-i18n="contacts.addressLabel">Адрес:</strong> Antalya Ataturk caddesi 95</p>
+              <p><strong data-i18n="contacts.phoneLabel">Телефон:</strong> <a href="tel:+905551234567">+90 555 123 45 67</a></p>
+              <p><strong data-i18n="contacts.hoursLabel">Режим работы:</strong> ежедневно 10:00–20:00</p>
+              <div class="contact-socials">
+                <a class="contact-link" href="https://instagram.com/imperial.detailing" target="_blank" rel="noopener noreferrer" aria-label="Instagram Imperial Detailing">
+                  <svg class="contact-link__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zM18 6.2a1.2 1.2 0 1 1 0 2.4a1.2 1.2 0 0 1 0-2.4z"/></svg>
+                  <span>@imperial.detailing</span>
+                </a>
+                <a class="contact-link" href="https://wa.me/905551234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Imperial Detailing">
+                  <svg class="contact-link__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3.5A10.5 10.5 0 0 0 3.3 17.8L2 22l4.3-1.3A10.5 10.5 0 1 0 20 3.5zM12 4.9a7.1 7.1 0 0 1 6.2 10.6c-.2.3-.6.8-1.2 1l-1.6.6c-.6.2-1 .1-1.4-.2c-.4-.2-1.2-.5-2.4-1.4c-1.1-.8-2-2-2.3-2.4c-.3-.5-.5-1-.1-1.6l.6-1.1c.2-.5.1-.8 0-1.1s-.8-2-1.1-2.4c-.3-.4-.7-.4-1.1-.4h-.9c-.3 0-.8.2-1.2.6c-.4.4-1.2 1.2-1.2 2.9c0 1.7 1.2 3.3 1.4 3.5c.2.3 2.5 3.9 6.2 5.4c3.8 1.5 4.6 1 5.5.9s2.7-1.1 3.1-2.2c.4-1.1.5-2 .5-2.3A7.1 7.1 0 0 0 12 4.9z"/></svg>
+                  <span>+90 555 123 45 67</span>
+                </a>
+                <a class="contact-link" href="mailto:imperial.detailing@gmail.com" aria-label="Email Imperial Detailing">
+                  <svg class="contact-link__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 3 3H6a3 3 0 0 1-3-3V6zm3-.5a.5.5 0 0 0-.5.5v.3l6.7 4.8L19.9 6.3V6a.5.5 0 0 0-.5-.5H6zm13 3.6l-6.3 4.5a1.5 1.5 0 0 1-1.8 0L4.6 9.1V18a.5.5 0 0 0 .5.5h12a.5.5 0 0 0 .5-.5V9.1z"/></svg>
+                  <span>imperial.detailing@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+            <form class="form" id="contactForm" novalidate>
+              <div class="form__field">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required minlength="2" placeholder="Ваше имя" />
+                <small class="form__error" id="error-name"></small>
+              </div>
+              <div class="form__field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+                <small class="form__error" id="error-email"></small>
+              </div>
+              <div class="form__field">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" required minlength="10" rows="4" placeholder="Кратко опишите заявку"></textarea>
+                <small class="form__error" id="error-message"></small>
+              </div>
+              <button type="submit" class="btn btn--primary">Отправить</button>
+              <p class="form__success" id="formSuccess" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__row">
+        <p><span id="rightsText" data-i18n="footer.copy">©</span> <span id="year"></span> <a class="logo" href="index.html" aria-label="Imperial Detailing">
+          <svg class="logo__mark" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 8l4 3 5-6 5 6 4-3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8z"/>
+          </svg>
+          <span class="logo__name">Imperial Detailing</span>
+        </a>. <span data-i18n="footer.rights">Все права защищены.</span></p>
+        <a class="footer__link" href="#hero">Наверх ↑</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+  </html>
+
+
